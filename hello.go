@@ -5,11 +5,12 @@ import "fmt"
 const helloPrefix = "Hello, "
 
 func Hello(name string) string {
-	// string is in our domain
+	if name == "" {
+		name = "World"	
+	}
 	return helloPrefix + name
 }
 
 func main() {
-	// side effect printing to stdout
 	fmt.Println(Hello("world"))
 }

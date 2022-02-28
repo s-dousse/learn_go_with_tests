@@ -3,6 +3,7 @@ package main
 import "testing"
 
 func TestHello(t *testing.T) {
+	// testing.TB can call helper functions from a Test, or a Benchmark
 	assertCorrectMessage := func(t testing.TB, got, want string) {
 		t.Helper()
 		if got != want {
